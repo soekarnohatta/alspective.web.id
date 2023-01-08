@@ -4,7 +4,7 @@ import Footer from "../components/Footer"
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="h-screen">
+    <div>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
