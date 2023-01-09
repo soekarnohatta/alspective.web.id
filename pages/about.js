@@ -7,8 +7,8 @@ import "swiper/css/autoplay";
 export default function About() {
     SwiperCore.use([Autoplay]);
     return (
-        <div className="bg-[url('/about/bg.png')] bg-cover py-20">
-            <Swiper slidesPerView={1} loop={true} autoplay={{delay: 2500}} modules={{Autoplay}} className="mySwiper">
+        <div className="bg-[url('/about/bg.png')] bg-cover py-32">
+            <Swiper slidesPerView={1} loop={true} autoplay={{delay: 5000}} modules={{Autoplay}} className="mySwiper">
                 <SwiperSlide>
                     <img src="/about/carousel1.png"></img>
                 </SwiperSlide>
@@ -30,13 +30,13 @@ export default function About() {
                         <img src="/about/line1.png" className="pt-6"></img>
                     </div>
                     <div className="justify-self-end">
-                        <img src="/about/about us pic.png" className="w-[30vw]"></img>
+                        <img src="/about/aboutus.png" className="w-[30vw]"></img>
                     </div>
                 </div>
 
                 <div className="bg-gray-300/50 backdrop-blur-lg justify-center grid grid-cols-2 rounded-[3rem] px-12 py-12">
                     <div className="self-center">
-                        <img src="/about/our theme pic.png" className="w-[40vw]"></img>
+                        <img src="/about/ourtheme.png" className="w-[40vw]"></img>
                     </div>
                     <div className="self-center">
                         <h1 className="bg-gradient-to-b from-white to-gray-500 inline-block text-transparent bg-clip-text font-ethnocentric text-7xl drop-shadow-lg">Our Theme</h1>
