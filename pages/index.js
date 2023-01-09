@@ -6,7 +6,7 @@ export default function Home() {
         <div className="h-screen flex justify-center items-center">
           <img src="/logo_landing.png" className="w-[calc(100vh-100px)] pb-8"></img>
         </div>
-        <div className="h-screen py-24">
+        <div className="h-[1080px] py-24 pt-56">
           <div className="flex justify-center col-span-2 text-white">
             <img src="/landing/toinfinity.png" className="w-[calc(100vh-100px)] object-contain"></img>
           </div>
@@ -20,7 +20,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-screen flex justify-center pt-64">
+        <div className="h-[1080px] flex justify-center pt-80">
           <div>
             <h1 className="text-white font-ethnocentric text-7xl text-center">TIMELINE</h1>
             <img src="/landing/timeline.png" className="w-[calc(100vh-100px)] object-contain pt-8"></img>
