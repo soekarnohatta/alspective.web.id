@@ -2,11 +2,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-[url('/landing/bg.png')] bg-cover">
+      <div className="xs:bg-[url('/landing/bg_mobile.png')] lg:bg-[url('/landing/bg.png')] bg-cover xs:bg-[92.5%_bottom] lg:bg-center">
         <div className="h-screen flex justify-center items-center">
-          <img src="/logo_landing.png" className="w-[calc(100vh-100px)] pb-8"></img>
+          <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"></img>
         </div>
-        <div className="h-[1080px] py-24 pt-56">
+
+        <div className="xs:hidden lg:block h-[1080px] py-24 pt-60">
           <div className="flex justify-center col-span-2 text-white">
             <img src="/landing/toinfinity.png" className="w-[calc(100vh-100px)] object-contain"></img>
           </div>
@@ -20,7 +21,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="h-[1080px] flex justify-center pt-80">
+        <div className="h-[1080px] xs:hidden lg:flex justify-center pt-[22rem]">
           <div>
             <h1 className="text-white font-ethnocentric text-7xl text-center">TIMELINE</h1>
             <img src="/landing/timeline.png" className="w-[calc(100vh-100px)] object-contain pt-8"></img>

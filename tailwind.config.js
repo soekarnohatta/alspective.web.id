@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -13,6 +13,10 @@ module.exports = {
         "poppins": ["Poppins", "sans-serif"]
       }
     },
+    screens: {
+      'xs': '280px',
+      ...defaultTheme.screens,
+    }
   },
   plugins: [],
 }
