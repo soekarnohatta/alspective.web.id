@@ -23,7 +23,7 @@ export default function Footer() {
                     <p>Find us on social media!</p>
                     <div className="flex gap-2 text-xl">
                         <FaTiktok />
-                        <a href="https://www.instagram.com/kepokedubes" target="_blank"><FaInstagram /></a>
+                        <a href="https://www.instagram.com/kepokedubes" target="_blank" rel="noreferrer"><FaInstagram /></a>
                     </div>
                 </div>
             </div>
