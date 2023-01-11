@@ -27,7 +27,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="w-screen bg-gradient-to-t from-[#000627] via-[#000627] fixed bottom-1 flex xs:flex-col sm:flex-row justify-center items-center text-white xs:gap-1 sm:gap-8 lg:hidden pt-20 xs:pb-1 sm:pb-3">
+            <div className="w-screen bg-gradient-to-t from-[#000627] via-[#000627] fixed bottom-0 flex xs:flex-col sm:flex-row justify-center items-center text-white xs:gap-1 sm:gap-8 lg:hidden pt-24 xs:pb-2 sm:pb-3">
                 <div>
                     <h1 className="bg-gradient-to-b from-white to-gray-300 inline-block text-transparent bg-clip-text font-ethnocentric text-center text-lg leading-none">TO INFINITY<br></br>AND BEYOND</h1>
                     <p className="text-center text-xs">© 2022 Kedubes Expo</p>
