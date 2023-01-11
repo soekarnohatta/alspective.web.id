@@ -41,7 +41,7 @@ export default function About() {
                     <div className="self-center">
                         <h1 className="bg-gradient-to-b from-white to-gray-500 inline-block text-transparent bg-clip-text font-ethnocentric text-7xl drop-shadow-lg">Our Theme</h1>
                         <p className="text-white font-poppins pt-8 text-2xl">
-                            Kedubes Expo tahun ini mengusung tema &quot;to the infinity and beyond"&quot; yang diangkat dari film berjudul &quot;Lightyear&quot;. Tema tersebut menggambarkan KEPO 2023 sebagai sebuah sarana yang akan membantu siswa/i SMAN 12 Jakarta untuk mengetahui gambaran mengenai tujuan baru yang akan mereka capai yaitu dunia perkuliahan.
+                            Kedubes Expo tahun ini mengusung tema &quot;to the infinity and beyond&quot; yang diangkat dari film berjudul &quot;Lightyear&quot;. Tema tersebut menggambarkan KEPO 2023 sebagai sebuah sarana yang akan membantu siswa/i SMAN 12 Jakarta untuk mengetahui gambaran mengenai tujuan baru yang akan mereka capai yaitu dunia perkuliahan.
                         </p>
                         <img src="/about/line2.png" className="pt-6"></img>
                     </div>
