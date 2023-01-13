@@ -10,7 +10,8 @@ module.exports = {
     extend: {
       fontFamily: {
         "ethnocentric": ["Ethnocentric", "sans-serif"],
-        "poppins": ["Poppins", "sans-serif"]
+        "poppins": ["Poppins", "sans-serif"],
+        "montserrat": ["Montserrat", "sans-serif"],
       }
     },
     screens: {
@@ -18,5 +19,10 @@ module.exports = {
       ...defaultTheme.screens,
     }
   },
-  plugins: [],
+  variants: {
+    extend: {
+      opacity: ["group-hover"],
+    },
+  },
+  plugins: [require("tailwind-scrollbar")],
 }
