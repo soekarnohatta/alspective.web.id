@@ -7,9 +7,9 @@ import "swiper/css";
 import 'swiper/css/navigation';
 
 export default function Navbar({visibility, slideNum, onClose}) {
-    if (!visibility) return null;
-
     const [swiper, setSwiper] = useState(null);
+
+    if (!visibility) return null;
 
     const prev= () => {
         swiper.slidePrev();
