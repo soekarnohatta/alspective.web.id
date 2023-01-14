@@ -1,30 +1,41 @@
 import SwiperCore, {Navigation, Scrollbar} from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
 import Link from 'next/link';
 import Modal from "../components/Modal";
+import PTNSlide from '../components/PTNSlide';
 
 import "swiper/css";
 import 'swiper/css/navigation';
 
 export default function InfoPTN() {
     const [slideNum, changeSlideNum] = useState(0);
-
     const [isModalVisible, showModal] = useState(false);
+    const [slideGap, setSlideGap] = useState(0);
+    const [perView, setPerView] = useState(125);
+
+    const handleResize = () => {
+        setSlideGap((window.clientWidth > 1024 ? 40 : 125))
+    }
+
+    useEffect(() => {
+        handleResize();
+        window.addEventListener("resize", handleResize);
+    })
 
     SwiperCore.use([Navigation, Scrollbar]);
     return (
-        <div className="flex flex-col bg-[url(/info/bg.png)] p-32">
-            <div className="flex bg-gradient-to-r from-[#1C2027] rounded-full px-16 py-4">
+        <div className="flex flex-col bg-[url(/info/bg.png)] xs:py-32 lg:p-32">
+            <div className="xs:hidden lg:flex bg-gradient-to-r from-[#1C2027] rounded-full px-16 py-4">
                 <h2 className="font-ethnocentric text-6xl text-white">Jalur Masuk PTN</h2>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col xs:bg-[#1C2027] lg:bg-transparent xs:p-8 xs:w-screen lg:w-full">
+                <h2 className="lg:hidden font-ethnocentric text-[6vw] text-white text-center">Jalur Masuk PTN</h2>
                 <div className="py-6">
                     <Swiper
-                        spaceBetween={40}
+                        spaceBetween={slideGap}
                         slidesPerView={4}
-                        simulateTouch={false}
                         navigation={{
                             enabled: true,
                             prevEl: ".nav-prev",
@@ -41,97 +52,75 @@ export default function InfoPTN() {
                     >
                         <SwiperSlide>
                             <div>
-                                <div className="bg-white rounded-3xl flex items-center aspect-square group">
-                                    <img src="/info/snbp.png" className="w-full h-full object-contain object-center group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(0);showModal(true);
-                                    }}>SNBP</div>
-                                </div>
+                                <PTNSlide name="SNBP" logo="/info/snbp.png" slideNumber={0} changeSlideNum={changeSlideNum} showModal={showModal}/>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <PTNSlide name="SNBT" logo="/info/snbt.png" slideNumber={1} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div>
+                                <PTNSlide name="SIMAK UI" logo="/info/ui.png" slideNumber={2} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/snbt.png" className="w-full h-full object-contain object-center p-8 group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(1);showModal(true);}}>SNBT</div>
-                                </div>
+                            <PTNSlide name="SM ITB" logo="/info/itb.png" slideNumber={3} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/ui.png" className="w-full h-full object-contain object-center p-8 group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(2);showModal(true);}}>SIMAK<br />UI</div>
-                                </div>
+                                <PTNSlide name="UTUL UGM" logo="/info/ugm.png" slideNumber={4} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/itb.png" className="w-full h-full object-contain object-center p-8 group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(3);showModal(true);}}>SM<br />ITB</div>
-                                </div>
+                                <PTNSlide name="SMUP UNPAD" logo="/info/unpad.png" slideNumber={5} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/ugm.png" className="w-full h-full object-contain object-center p-8 group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(4);showModal(true);}}>UTUL UGM</div>
-                                </div>
+                                <PTNSlide name="UM UNDIP" logo="/info/undip.png" slideNumber={6} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                            <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/unpad.png" className="w-full h-full object-contain object-center group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(5);showModal(true);}}>SMUP UNPAD</div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div>
-                                <div className="group bg-white rounded-3xl flex items-center aspect-square">
-                                    <img src="/info/undip.png" className="w-full h-full object-contain object-center p-8 group-hover:opacity-50"></img>
-                                    <div className="bg-gradient-to-t from-neutral-800 h-full w-full flex justify-center items-center absolute rounded-3xl text-6xl text-white text-center font-montserrat font-extrabold transition opacity-0 group-hover:opacity-100 cursor-pointer" onClick={() => {changeSlideNum(6);showModal(true);}}>UM UNDIP</div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <div className="nav-prev bg-gradient-to-r from-neutral-600 absolute top-0 text-white text-5xl flex justify-center items-center h-full z-10 right-auto cursor-pointer">
+                        <div className="nav-prev bg-gradient-to-r from-neutral-600 absolute top-0 text-white text-5xl xs:hidden lg:flex justify-center items-center h-full z-10 right-auto cursor-pointer">
                             <IoIosArrowBack></IoIosArrowBack>
                         </div>
-                        <div className="nav-next bg-gradient-to-l from-neutral-600 absolute top-0 text-white text-5xl flex justify-center items-center h-full z-10 right-0 left-auto cursor-pointer">
+                        <div className="nav-next bg-gradient-to-l from-neutral-600 absolute top-0 text-white text-5xl xs:hidden lg:flex justify-center items-center h-full z-10 right-0 left-auto cursor-pointer">
                             <IoIosArrowForward></IoIosArrowForward>
                         </div>
                     </Swiper>
                 </div>
-                <div className="bg-[#375290] h-2 w-[30vw] my-2 rounded self-center scrollbar-body">
-                    <div className="bg-white h-2 rounded drag"></div>
+                <div className="bg-[#375290] xs:h-3 lg:h-2 xs:w-[50vw] lg:w-[30vw] my-2 xs:rounded-xl lg:rounded self-center scrollbar-body">
+                    <div className="bg-white xs:h-3 lg:h-2 xs:rounded-xl lg:rounded drag"></div>
                 </div>
             </div>
-            <div className="bg-[#1C2027] p-16 text-white my-8 rounded-[3rem] grid grid-cols-2">
-                <div className="flex flex-col gap-4 justify-center">
-                    <h1 className="font-ethnocentric text-5xl">Track Record</h1>
+            <div className="bg-[#1C2027] xs:p-10 lg:p-16 text-white my-8 lg:rounded-[3rem] lg:grid lg:grid-cols-2">
+                <div className="flex flex-col xs:gap-10 lg:gap-4 justify-center">
+                    <h1 className="font-ethnocentric xs:text-[7vw] xs:text-center lg:text-left lg:text-5xl">Track Record</h1>
+                    <img src="/info/record.png" className="self-center w-[18rem] lg:hidden"></img>
                     <p className="font-poppins text-xl leading-relaxed">
                         Track Record berisi data keberhasilan alumni SMAN 12 Jakarta dalam rentang waktu 2 tahun terakhir. Hal tersebut dapat kamu jadikan gambaran, motivasi, ataupun strategi dalam perjalanan ini. Silakan dibaca pada dokumen dapat kamu lihat di bawah ini!
                     </p>
-                    <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full mt-6">
+                    <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start">
                         <Link href="#" className="text-black font-poppins font-bold text-xl">Lihat Track Record</Link>
                     </div>
                 </div>
-                <div className="justify-self-end">
-                    <img src="/info/record.png" className="h-[20rem]"></img>
+                <div className="justify-self-end xs:hidden lg:block">
+                    <img src="/info/record.png" className="w-[32vw] pl-8"></img>
                 </div>
             </div>
-            <div className="bg-[#1C2027] p-16 text-white mt-8 rounded-[3rem] grid grid-cols-2">
-                <div>
-                    <img src="/info/booklet.png" className="h-[20rem]"></img>
+            <div className="bg-[#1C2027] xs:p-10 lg:p-16 text-white mt-8 lg:rounded-[3rem] lg:grid lg:grid-cols-2">
+                <div className="xs:hidden lg:block">
+                    <img src="/info/booklet.png" className="w-[32vw] pr-8"></img>
                 </div>
-                <div className="flex flex-col gap-4 justify-center">
-                    <h1 className="font-ethnocentric text-5xl">Booklet Jurusan</h1>
+                <div className="flex flex-col xs:gap-10 lg:gap-4 justify-center">
+                    <h1 className="font-ethnocentric xs:text-[5.7vw] xs:text-center lg:text-left lg:text-5xl">Booklet Jurusan</h1>
+                    <img src="/info/booklet.png" className="self-center w-[24rem] lg:hidden"></img>
                     <p className="font-poppins text-xl leading-relaxed">
                         Booklet jurusan berisi detail-detail dari semua jurusan yang kamu tuju. Mulai dari kampus, mata kuliah hingga prospek kerja. Hal ini dapat kalian jadikan motivasi dan juga persiapan sebelum memulai perjalanan di dunia perkuliahan nanti.
                     </p>
-                    <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full mt-6">
+                    <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start">
                         <Link href="#" className="text-black font-poppins font-bold text-xl">Download Booklet</Link>
                     </div>
                 </div>

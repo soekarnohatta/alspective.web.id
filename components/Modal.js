@@ -13,13 +13,13 @@ export default function Navbar({visibility, slideNum, onClose}) {
 
     const prev= () => {
         if (swiper) {
-            swiper.slideTo(swiper.realIndex-1);
+            swiper.slidePrev();
         }
     }
 
     const next= () => {
         if (swiper) {
-            swiper.slideTo(swiper.realIndex+1);
+            swiper.slideNext();
         }
     }
 
@@ -30,7 +30,7 @@ export default function Navbar({visibility, slideNum, onClose}) {
     SwiperCore.use([Navigation]);
     return (
         <div className="fixed inset-0 bg-black/50 z-50" id="wrapper" onClick={handleClose}>
-            <div className="bg-[#1C2027] text-white p-16 rounded-3xl m-24 shadow-lg shadow-white/10">
+            <div className="bg-[#1C2027] text-white xs:p-8 lg:p-16 rounded-3xl lg:m-24 shadow-lg shadow-white/10">
                 <Swiper 
                     slidesPerGroup={1}
                     navigation={{
@@ -48,7 +48,7 @@ export default function Navbar({visibility, slideNum, onClose}) {
                                 <div className="bg-white rounded-3xl flex items-center aspect-square w-[12rem]">
                                     <img src="/info/snbp.png" className="object-contain object-center"></img>
                                 </div>
-                                <h1 className="font-ethnocentric text-4xl">SNBP</h1>
+                                <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SNBP</h1>
                             </div>
                             <hr className="border-2"/>
                             <div className="font-poppins px-10 mx-2 flex flex-col gap-8 h-[40vh] overflow-y-scroll scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -455,10 +455,10 @@ export default function Navbar({visibility, slideNum, onClose}) {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <div className="bg-gradient-to-r from-black absolute top-[calc(50vh-8rem)] text-white text-5xl flex justify-center items-center h-[16rem] z-10 left-0 right-auto cursor-pointer" onClick={prev}>
+            <div className="bg-gradient-to-r from-black absolute top-[calc(50vh-8rem)] text-white text-5xl xs:hidden lg:flex justify-center items-center h-[16rem] z-10 left-0 right-auto cursor-pointer" onClick={prev}>
                 <IoIosArrowBack></IoIosArrowBack>
             </div>
-            <div className="bg-gradient-to-l from-black absolute top-[calc(50vh-8rem)] text-white text-5xl flex justify-center items-center h-[16rem] z-10 right-0 left-auto cursor-pointer" onClick={next}>
+            <div className="bg-gradient-to-l from-black absolute top-[calc(50vh-8rem)] text-white text-5xl xs:hidden lg:flex justify-center items-center h-[16rem] z-10 right-0 left-auto cursor-pointer" onClick={next}>
                 <IoIosArrowForward></IoIosArrowForward>
             </div>
         </div>
