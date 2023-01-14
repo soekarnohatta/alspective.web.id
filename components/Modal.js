@@ -12,15 +12,11 @@ export default function Navbar({visibility, slideNum, onClose}) {
     const [swiper, setSwiper] = useState(null);
 
     const prev= () => {
-        if (swiper) {
-            swiper.slidePrev();
-        }
+        swiper.slidePrev();
     }
 
     const next= () => {
-        if (swiper) {
-            swiper.slideNext();
-        }
+        swiper.slideNext();
     }
 
     const handleClose = (e) => {
