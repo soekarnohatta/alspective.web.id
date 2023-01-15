@@ -103,7 +103,7 @@ export default function InfoPTN() {
                     <p className="font-poppins text-xl leading-relaxed">
                         Track Record berisi data keberhasilan alumni SMAN 12 Jakarta dalam rentang waktu 2 tahun terakhir. Hal tersebut dapat kamu jadikan gambaran, motivasi, ataupun strategi dalam perjalanan ini. Silakan dibaca pada dokumen dapat kamu lihat di bawah ini!
                     </p>
-                    <div className="bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white">
+                    <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
                         <a href="https://drive.google.com/drive/folders/1gjK8pISkeiEf6iykLx2RrdwNp0cq5QT-" target="_blank" rel="noreferrer" className="font-poppins font-bold text-xl">Lihat Track Record</a>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ export default function InfoPTN() {
                     <p className="font-poppins text-xl leading-relaxed">
                         Booklet jurusan berisi detail-detail dari semua jurusan yang kamu tuju. Mulai dari kampus, mata kuliah hingga prospek kerja. Hal ini dapat kalian jadikan motivasi dan juga persiapan sebelum memulai perjalanan di dunia perkuliahan nanti.
                     </p>
-                    <div className="bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white">
+                    <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
                         <a href="https://drive.google.com/drive/folders/1a4NNW-yKGbIpz0gnpfdpJleGQKyZeQ20?usp=sharing" target="_blank" rel="noreferrer"  className="font-poppins font-bold text-xl">Download Booklet</a>
                     </div>
                 </div>

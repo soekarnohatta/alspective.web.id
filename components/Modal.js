@@ -21,13 +21,14 @@ export default function Modal({visibility, slideNum, onClose}) {
     }
 
     const handleClose = (e) => {
-        if (e.target.id === "wrapper") onClose();
+        console.log(e.target.id, e.target.className);
+        if (e.target.className.includes("outside")) onClose();
     }
 
     SwiperCore.use([Navigation]);
     return (
         <div className="fixed top-0 left-0 w-full h-full bg-black/50 z-40 text-white !overflow-y-initial">
-            <div className="lg:flex lg:items-center w-full xs:h-auto lg:h-screen xs:max-h-full lg:max-h-max overflow-x-hidden overflow-y-auto" id="wrapper" onClick={handleClose}>
+            <div className="lg:flex lg:items-center w-full xs:h-auto lg:h-screen xs:max-h-full lg:max-h-max overflow-x-hidden overflow-y-auto outside" onClick={handleClose}>
                 <Swiper 
                     slidesPerGroup={1}
                     autoHeight={true}
@@ -459,7 +460,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                     </SwiperSlide>
                 </Swiper>
                 <div className="fixed bottom-0 z-50">
-                    <div className="w-screen h-20 bg-gradient-to-t from-black"></div>
+                    <div className="w-screen h-20 bg-gradient-to-t from-black outside"></div>
                 </div>
             </div>
             <div className="bg-gradient-to-r from-black absolute top-[calc(50vh-8rem)] text-white text-5xl xs:hidden lg:flex justify-center items-center h-[16rem] z-10 left-0 right-auto cursor-pointer" onClick={prev}>

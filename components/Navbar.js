@@ -25,10 +25,10 @@ export default function Navbar() {
 
           <ul className="xs:hidden lg:flex items-center gap-14 text-xl font-ethnocentric">
             <li>
-              <Link href="/infoptn" className="hover:underline underline-offset-[5px]">Info PTN</Link>
+              <Link href="/infoptn" className="transition underline underline-offset-[5px] decoration-transparent hover:decoration-black duration-200">Info PTN</Link>
             </li>
             <li>
-              <Link href="/about" className="hover:underline underline-offset-[5px]">About Us</Link>
+              <Link href="/about" className="transition underline underline-offset-[5px] decoration-transparent hover:decoration-black duration-200">About Us</Link>
             </li>
           </ul>
 
