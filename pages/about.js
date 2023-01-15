@@ -21,7 +21,7 @@ export default function About() {
             </Swiper>
 
             <div className="grid lg:pt-10 lg:px-10 gap-16">
-                <div className="bg-gray-300/50 backdrop-blur-lg justify-center lg:grid lg:grid-cols-2 lg:rounded-[3rem] px-10 py-10">
+                <div className="bg-[#1C2027] justify-center lg:grid lg:grid-cols-2 lg:rounded-[3rem] px-10 py-10">
                     <div className="xs:flex xs:flex-col xs:items-center xs:gap-4 lg:block lg:self-center">
                         <h1 className="bg-gradient-to-b from-white to-gray-300 inline-block text-transparent bg-clip-text font-ethnocentric xs:text-4xl lg:text-7xl drop-shadow-lg">About Us</h1>
                         <img src="/about/aboutus.png" className="lg:w-[30vw] lg:hidden"></img>
@@ -35,7 +35,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="bg-gray-300/50 backdrop-blur-lg justify-center lg:grid lg:grid-cols-2 lg:rounded-[3rem] px-10 py-10">
+                <div className="bg-[#1C2027] justify-center lg:grid lg:grid-cols-2 lg:rounded-[3rem] px-10 py-10">
                     <div className="xs:justify-self-end lg:justify-self-start xs:hidden lg:block lg:self-center">
                         <img src="/about/ourtheme.png" className="w-[35vw]"></img>
                     </div>
