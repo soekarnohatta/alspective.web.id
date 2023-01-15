@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 @font-face {
     font-family: "ethnocentric";
     src: url("../public/fonts/ethnocentric.otf");
 }
+
+.overflowHidden {
+    overflow: hidden;
+    margin: 0;
+    touch-action: none;
+    -ms-touch-action: none;
+    height: 100%;
+  }
