@@ -2,6 +2,7 @@ import {useState} from "react";
 import SwiperCore, {Navigation} from 'swiper';
 import {Swiper, SwiperSlide} from "swiper/react";
 import {IoIosArrowBack, IoIosArrowForward} from "react-icons/io";
+import {ImCross} from "react-icons/im";
 
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -47,7 +48,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" />
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -85,7 +86,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -182,7 +183,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -227,7 +228,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -281,7 +282,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -366,7 +367,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
@@ -414,7 +415,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Jalur Masuk PTN</h1>
-                                    <p onClick={() => onClose()} className="justify-self-end">X</p> 
+                                    <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
