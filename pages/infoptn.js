@@ -12,16 +12,13 @@ import 'swiper/css/navigation';
 export default function InfoPTN() {
     const [slideNum, changeSlideNum] = useState(0);
     const [isModalVisible, showModal] = useState(false);
-    const [slideGap, setSlideGap] = useState(0);
-    const [perView, setPerView] = useState(125);
-
-    const handleResize = () => {
-        setSlideGap((window.clientWidth > 1024 ? 40 : 125))
-    }
 
     useEffect(() => {
-        handleResize();
-        window.addEventListener("resize", handleResize);
+        if(isModalVisible) {
+            document.querySelector("body").classList.add("overflowHidden");
+        } else {
+            document.querySelector("body").classList.remove("overflowHidden");
+        }
     })
 
     SwiperCore.use([Navigation, Scrollbar]);
@@ -34,15 +31,19 @@ export default function InfoPTN() {
                 <h2 className="lg:hidden font-ethnocentric text-[6vw] text-white text-center">Jalur Masuk PTN</h2>
                 <div className="py-6">
                     <Swiper
-                        spaceBetween={slideGap}
-                        slidesPerView={4}
+                        spaceBetween={40}
+                        slidesPerView={2}
+                        breakpoints={{
+                            1024: {
+                                spaceBetween: 80,
+                                slidesPerView: 4,
+                            }
+                        }}
                         navigation={{
-                            enabled: true,
                             prevEl: ".nav-prev",
                             nextEl: ".nav-next",
                         }}
                         scrollbar={{
-                            enabled: true,
                             draggable: true,
                             el: ".scrollbar-body",
                             dragClass: 'drag',
@@ -56,31 +57,31 @@ export default function InfoPTN() {
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <PTNSlide name="SNBT" logo="/info/snbt.png" slideNumber={1} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                            <PTNSlide name="SNBT" logo="/info/snbt.png" slideNumber={1} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="SIMAK UI" logo="/info/ui.png" slideNumber={2} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                                <PTNSlide name="SIMAK UI" logo="/info/ui.png" slideNumber={2} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                            <PTNSlide name="SM ITB" logo="/info/itb.png" slideNumber={3} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                            <PTNSlide name="SM ITB" logo="/info/itb.png" slideNumber={3} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="UTUL UGM" logo="/info/ugm.png" slideNumber={4} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                                <PTNSlide name="UTUL UGM" logo="/info/ugm.png" slideNumber={4} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="SMUP UNPAD" logo="/info/unpad.png" slideNumber={5} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                                <PTNSlide name="SMUP UNPAD" logo="/info/unpad.png" slideNumber={5} changeSlideNum={changeSlideNum} showModal={showModal} />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="UM UNDIP" logo="/info/undip.png" slideNumber={6} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="p-8"/>
+                                <PTNSlide name="UM UNDIP" logo="/info/undip.png" slideNumber={6} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <div className="nav-prev bg-gradient-to-r from-neutral-600 absolute top-0 text-white text-5xl xs:hidden lg:flex justify-center items-center h-full z-10 right-auto cursor-pointer">
@@ -91,8 +92,8 @@ export default function InfoPTN() {
                         </div>
                     </Swiper>
                 </div>
-                <div className="bg-[#375290] xs:h-3 lg:h-2 xs:w-[50vw] lg:w-[30vw] my-2 xs:rounded-xl lg:rounded self-center scrollbar-body">
-                    <div className="bg-white xs:h-3 lg:h-2 xs:rounded-xl lg:rounded drag"></div>
+                <div className="bg-[#375290] h-2 xs:w-[50vw] lg:w-[30vw] my-2 xs:rounded-xl lg:rounded self-center scrollbar-body">
+                    <div className="bg-white h-2 xs:rounded-xl lg:rounded drag"></div>
                 </div>
             </div>
             <div className="bg-[#1C2027] xs:p-10 lg:p-16 text-white my-8 lg:rounded-[3rem] lg:grid lg:grid-cols-2">
@@ -125,7 +126,7 @@ export default function InfoPTN() {
                     </div>
                 </div>
             </div>
-            <Modal visibility={isModalVisible} slideNum={slideNum} onClose={() => showModal(false)} />
+            <Modal visibility={isModalVisible} slideNum={slideNum} onClose={() => showModal(false)}/>
         </div>
     )
 }

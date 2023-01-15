@@ -8,7 +8,7 @@ export default function About() {
     SwiperCore.use([Autoplay]);
     return (
         <div className="bg-[url('/about/bg.png')] bg-cover bg-center py-32">
-            <Swiper slidesPerView={1} loop={true} autoplay={{delay: 5000}} modules={{Autoplay}} className="mySwiper xs:hidden lg:block">
+            <Swiper slidesPerView={1} loop={true} autoplay={{delay: 4000}} modules={{Autoplay}} className="mySwiper xs:hidden lg:block">
                 <SwiperSlide>
                     <img src="/about/carousel1.png"></img>
                 </SwiperSlide>
