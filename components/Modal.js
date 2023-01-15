@@ -41,7 +41,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                     modules={[Navigation]} 
                     initialSlide={slideNum}
                     onSwiper={(s) => setSwiper(s)}
-                    className="xs:!mt-[18vh] lg:!mt-0 lg:!mx-24"
+                    className="xs:!mt-[14vh] lg:!mt-0 lg:!mx-24"
                 >
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
