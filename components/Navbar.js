@@ -39,6 +39,10 @@ export default function Navbar() {
         <div className="fixed top-20 left-[2.5rem] bg-gray-200/95 backdrop-blur-lg w-[calc(100vw-80px)] shadow-lg shadow-white/25 rounded-xl z-10">
           <ul className="flex flex-col gap-4 text-xl font-ethnocentric pt-10 pb-6 px-6">
             <li>
+              <Link href="/" onClick={() => toggleNavbar(false)}>Home</Link>
+            </li>
+            <hr className="h-px w-[calc(100vw-135px)] bg-gray-400 border-0"></hr>
+            <li>
               <Link href="/infoptn" onClick={() => toggleNavbar(false)}>Info PTN</Link>
             </li>
             <hr className="h-px w-[calc(100vw-135px)] bg-gray-400 border-0"></hr>
