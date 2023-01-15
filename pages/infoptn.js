@@ -104,7 +104,7 @@ export default function InfoPTN() {
                         Track Record berisi data keberhasilan alumni SMAN 12 Jakarta dalam rentang waktu 2 tahun terakhir. Hal tersebut dapat kamu jadikan gambaran, motivasi, ataupun strategi dalam perjalanan ini. Silakan dibaca pada dokumen dapat kamu lihat di bawah ini!
                     </p>
                     <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start">
-                        <Link href="#" className="text-black font-poppins font-bold text-xl">Lihat Track Record</Link>
+                        <a href="https://drive.google.com/drive/folders/1gjK8pISkeiEf6iykLx2RrdwNp0cq5QT-" target="_blank" rel="noreferrer" className="text-black font-poppins font-bold text-xl">Lihat Track Record</a>
                     </div>
                 </div>
                 <div className="justify-self-end xs:hidden lg:block">
@@ -122,7 +122,7 @@ export default function InfoPTN() {
                         Booklet jurusan berisi detail-detail dari semua jurusan yang kamu tuju. Mulai dari kampus, mata kuliah hingga prospek kerja. Hal ini dapat kalian jadikan motivasi dan juga persiapan sebelum memulai perjalanan di dunia perkuliahan nanti.
                     </p>
                     <div className="bg-white flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start">
-                        <Link href="#" className="text-black font-poppins font-bold text-xl">Download Booklet</Link>
+                        <a href="https://drive.google.com/drive/folders/1a4NNW-yKGbIpz0gnpfdpJleGQKyZeQ20?usp=sharing" target="_blank" rel="noreferrer"  className="text-black font-poppins font-bold text-xl">Download Booklet</a>
                     </div>
                 </div>
             </div>
