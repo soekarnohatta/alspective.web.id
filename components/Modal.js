@@ -21,7 +21,6 @@ export default function Modal({visibility, slideNum, onClose}) {
     }
 
     const handleClose = (e) => {
-        console.log(e.target.id, e.target.className);
         if (e.target.className.includes("outside")) onClose();
     }
 
