@@ -46,7 +46,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
                                 <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" />
                                 </div>
                                 <hr className="border-1 lg:hidden"/>

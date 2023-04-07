@@ -26,7 +26,10 @@ export default function About() {
                         <h1 className="bg-gradient-to-b from-white to-gray-300 inline-block text-transparent bg-clip-text font-ethnocentric xs:text-4xl lg:text-7xl drop-shadow-lg">About Us</h1>
                         <img src="/about/aboutus.png" className="lg:w-[30vw] lg:hidden"></img>
                         <p className="text-white font-poppins xs:pt-4 lg:pt-8 xs:text-xl lg:text-2xl">
-                            Kedubes Expo 2023 atau biasa disingkat KEPO adalah acara tahunan yang menjadi sarana pemberian informasi kepada siswa/i SMAN 12 Jakarta terkait berbagai program studi di perguruan tinggi. Kedubes Expo 2023 bertujuan memudahkan dalam menentukan pilihan masa depan untuk ke jenjang berikutnya dan diselenggarakan oleh Alumni SMAN 12 Jakarta.
+							OSIS SMA Islam Al Azhar 19 Ciracas ingin
+							mengembangkan potensi siswa/i dari dalam sekolah maupun siswa/i dengan kegiatan
+							bernama ALSPECTIVE. Alspective merupakan kompetisi yang meliputi berbagai ajang dan juga pentas
+							seni. Kegiatan ALSPECTIVE 3.0 (Al Azhar Space of Creativity) akan dilaksanakan pada tanggal 3 Mei -14 Mei 2023. 
                         </p>
                         <img src="/about/line1.png" className="pt-6 xs:hidden lg:block"></img>
                     </div>
@@ -43,7 +46,8 @@ export default function About() {
                         <h1 className="bg-gradient-to-b from-white to-gray-300 inline-block text-transparent bg-clip-text font-ethnocentric xs:text-4xl lg:text-7xl drop-shadow-lg">Our Theme</h1>
                         <img src="/about/ourtheme.png" className="w-[80vw] lg:hidden"></img>
                         <p className="text-white font-poppins xs:pt-4 lg:pt-8 xs:text-xl lg:text-2xl">
-                            Kedubes Expo tahun ini mengusung tema &quot;to the infinity and beyond&quot; yang diangkat dari film berjudul &quot;Lightyear&quot;. Tema tersebut menggambarkan KEPO 2023 sebagai sebuah sarana yang akan membantu siswa/i SMAN 12 Jakarta untuk mengetahui gambaran mengenai tujuan baru yang akan mereka capai yaitu dunia perkuliahan.
+							Acara ini bertemakan “Step Right Up To Be A Star”. Acara ini dilaksanakan secara offline yang
+							bertempat di SMA Islam Al-Azhar 19 Ciracas. Kegiatan ini bertujuan untuk mendorong kreativitas yang ada didalam diri kita.
                         </p>
                         <img src="/about/line2.png" className="pt-6 xs:hidden lg:block"></img>
                     </div>

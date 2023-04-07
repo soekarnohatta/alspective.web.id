@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Kedubes Expo 2023</title>
+        <title>Alspective 2023</title>
       </Head>
       <div>
         <Navbar />
