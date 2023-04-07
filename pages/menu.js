@@ -28,7 +28,7 @@ export default function InfoPTN() {
                 <h2 className="font-ethnocentric text-6xl text-white">Information</h2>
             </div>
             <div className="flex flex-col xs:bg-[#1C2027] lg:bg-transparent xs:p-8 xs:w-screen lg:w-full">
-                <h2 className="lg:hidden font-ethnocentric text-[6vw] text-white text-center">Informasi Terkini</h2>
+                <h2 className="lg:hidden font-ethnocentric text-[6vw] text-white text-center">Information</h2>
                 <div className="py-6">
                     <Swiper
                         spaceBetween={40}
@@ -108,7 +108,7 @@ export default function InfoPTN() {
                       Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo.
                     </p>
                     <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
-                        <a href="app.alspective.web.id" target="_blank" rel="noreferrer"  className="font-poppins font-bold text-xl">Download Booklet</a>
+                        <a href="https://app.alspective.web.id" target="_blank" rel="noreferrer"  className="font-poppins font-bold text-xl">Download Booklet</a>
                     </div>
                 </div>
             </div>
@@ -121,7 +121,7 @@ export default function InfoPTN() {
                        Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo.
                     </p>
                     <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
-                        <a href="app.alspective.web.id" target="_blank" rel="noreferrer" className="font-poppins font-bold text-xl">Register Now !</a>
+                        <a href="https://app.alspective.web.id" target="_blank" rel="noreferrer" className="font-poppins font-bold text-xl">Register Now !</a>
                     </div>
                 </div>
                 <div className="justify-self-end xs:hidden lg:block">

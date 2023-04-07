@@ -25,7 +25,7 @@ export default function Navbar() {
 
           <ul className="xs:hidden lg:flex items-center gap-14 text-xl font-ethnocentric">
             <li>
-              <Link href="/infoptn" className="transition underline underline-offset-[5px] decoration-transparent hover:decoration-black duration-200">Menu</Link>
+              <Link href="/menu" className="transition underline underline-offset-[5px] decoration-transparent hover:decoration-black duration-200">Menu</Link>
             </li>
             <li>
               <Link href="/about" className="transition underline underline-offset-[5px] decoration-transparent hover:decoration-black duration-200">About Us</Link>
@@ -43,7 +43,7 @@ export default function Navbar() {
             </li>
             <hr className="h-px w-[calc(100vw-135px)] bg-gray-400 border-0"></hr>
             <li>
-              <Link href="/infoptn" onClick={() => toggleNavbar(false)}>Information</Link>
+              <Link href="/menu" onClick={() => toggleNavbar(false)}>Menu</Link>
             </li>
             <hr className="h-px w-[calc(100vw-135px)] bg-gray-400 border-0"></hr>
             <li>

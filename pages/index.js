@@ -2,9 +2,13 @@ export default function Home() {
 
   return (
     <>
-      <div  className="xs:bg-[url('/landing/bg_mobile.png')] lg:bg-[url('/landing/bg.png')] bg-cover xs:bg-[92.5%_bottom] lg:bg-center">
-        <div className="h-screen flex justify-center items-center">
-          <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"></img>
+	  <div className="lg:hidden  video-background h-screen flex justify-center items-center">
+		<iframe src="https://www.youtube.com/embed/ANsNQnA1330?controls=0&showinfo=0&rel=0&mute=1&autoplay=1&loop=1&playlist=ANsNQnA1330" frameBorder="0" allowFullScreen ></iframe>
+		<div className="container2"> <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"></img></div>  
+     </div>
+     <div  className="xs:bg-[url('/landing/bg_mobile.png')] lg:bg-[url('/landing/bg.png')] bg-cover xs:bg-[92.5%_bottom] lg:bg-center">	
+        <div className="xs:hidden lg:block h-screen flex justify-center items-center ">
+          <div className="container2"> <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"></img></div>
         </div>
         <div className="xs:hidden lg:block h-[1080px] py-16 pt-[16.5vw]">
           <div className="flex justify-center col-span-2 text-white">
