@@ -53,7 +53,7 @@ export default function InfoPTN() {
                     >
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="Reg SMA" logo="/info/snbp.png" slideNumber={0} changeSlideNum={changeSlideNum} showModal={showModal}/>
+                                <PTNSlide name="Reg SMA" logo="/info/snbp.png" slideNumber={0} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -76,7 +76,7 @@ export default function InfoPTN() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div>
-                                <PTNSlide name="Syarat Pndftrn" logo="/info/unpad.png" slideNumber={5} changeSlideNum={changeSlideNum} showModal={showModal} />
+                                <PTNSlide name="Syarat Pndftrn" logo="/info/unpad.png" slideNumber={5} changeSlideNum={changeSlideNum} showModal={showModal} imgClassName="xs:p-3 lg:p-8"/>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -102,10 +102,10 @@ export default function InfoPTN() {
                     <img src="/info/booklet.png" className="w-[32vw] pr-8"></img>
                 </div>
                 <div className="flex flex-col xs:gap-10 lg:gap-4 justify-center">
-                    <h1 className="font-ethnocentric xs:text-[5.7vw] xs:text-center lg:text-left lg:text-5xl">Booklet Alspective</h1>
+                    <h1 className="font-ethnocentric xs:text-[5.7vw] xs:text-center lg:text-left lg:text-5xl">Alspective Booklet</h1>
                     <img src="/info/booklet.png" className="self-center w-[24rem] lg:hidden"></img>
                     <p className="font-poppins text-xl leading-relaxed">
-                      Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo.
+                      You are in a mission of searching information? This booklet might help you! Go grab one from our planet by clicking the button below!
                     </p>
                     <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
                         <a href="https://app.alspective.web.id" target="_blank" rel="noreferrer"  className="font-poppins font-bold text-xl">Download Booklet</a>
@@ -118,7 +118,7 @@ export default function InfoPTN() {
                     <h1 className="font-ethnocentric xs:text-[7vw] xs:text-center lg:text-left lg:text-5xl">Registration</h1>
                     <img src="/info/record.png" className="self-center w-[18rem] lg:hidden"></img>
                     <p className="font-poppins text-xl leading-relaxed">
-                       Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo.
+                       You are interested in joining us? Come and don't hesitate to register yourself to join this event! Spot is indeed limited. So what are you waiting for?
                     </p>
                     <div className="transition duration-300 bg-white hover:bg-[#1C2027] hover:border-[3px] flex justify-center items-center w-[18rem] h-[3rem] rounded-full lg:mt-6 xs:self-center lg:self-start text-black hover:text-white cursor-pointer">
                         <a href="https://app.alspective.web.id" target="_blank" rel="noreferrer" className="font-poppins font-bold text-xl">Register Now !</a>

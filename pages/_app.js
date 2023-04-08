@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <title>Alspective 2023</title>
+
       </Head>
       <div>
         <Navbar />

@@ -21,7 +21,7 @@ export default function Modal({visibility, slideNum, onClose}) {
     }
 
     const handleClose = (e) => {
-        if (e.target.className.includes("outside")) onClose();
+        if (e.target.className && e.target.className !== undefined && e.target.className === "outside") { onClose()};
     }
 
     SwiperCore.use([Navigation]);
@@ -45,16 +45,16 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
                                     <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" />
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
                                 <div className="flex lg:justify-center items-center lg:self-start gap-8 xs:pt-4 lg:pt-0 xs:mx-2 lg:mx-12">
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
-                                        <img src="/info/snbp.png" className="object-contain object-center"></img>
+                                        <img src="/info/snbp.png" className="object-contain object-center p-3"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SNBP</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Registrasi Tingkat SMA</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -83,8 +83,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -92,7 +92,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/snbt.png" className="object-contain object-center p-3"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SNBT</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Registrasi Tingkat SMP</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -180,8 +180,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -189,7 +189,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/ui.png" className="object-contain object-center p-3"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SIMAK UI</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Booklet Alspective</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -225,8 +225,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -234,7 +234,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/itb.png" className="object-contain object-center p-3"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SM ITB</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Informasi Biaya Pendaftaran</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -279,8 +279,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -288,7 +288,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/ugm.png" className="object-contain object-center p-3"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">UTUL UGM</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Kemudahan Akses Melalui Alspective APPS</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -364,8 +364,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Information</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -373,7 +373,7 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/unpad.png" className="object-contain object-center"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">SMUP UNPAD</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">Syarat Pendaftaran</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
@@ -412,8 +412,8 @@ export default function Modal({visibility, slideNum, onClose}) {
                     <SwiperSlide>
                         <div className="bg-[#1C2027] xs:mb-16 lg:mb-0 xs:p-4 lg:pt-12 lg:px-12 rounded-3xl">
                             <div className="flex flex-col xs:gap-2 lg:gap-8">
-                                <div className="xs:grid lg:hidden px-2 grid-cols-2 font-poppins font-bold">
-                                    <h1>Jalur Masuk PTN</h1>
+                                <div className="xs:grid lg:grid px-2 grid-cols-2 font-poppins font-bold">
+                                    <h1>Kebijakan Privasi</h1>
                                     <ImCross onClick={() => onClose()} className="justify-self-end self-center text-sm" /> 
                                 </div>
                                 <hr className="border-1 lg:hidden"/>
@@ -421,38 +421,11 @@ export default function Modal({visibility, slideNum, onClose}) {
                                     <div className="bg-white xs:rounded-xl lg:rounded-3xl flex items-center aspect-square xs:w-[30vw] lg:w-[12rem]">
                                         <img src="/info/undip.png" className="object-contain object-center p-4"></img>
                                     </div>
-                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">UM UNDIP</h1>
+                                    <h1 className="font-ethnocentric xs:text-2xl lg:text-4xl">KEBIJAKAN PRIVASI</h1>
                                 </div>
                                 <hr className="border-2 xs:hidden lg:block"/>
                                 <div className="font-poppins xs:px-4 lg:px-10 lg:mx-2 xs:py-4 lg:py-0 lg:pb-4 flex flex-col gap-8 lg:h-[40vh] scrollbar-thin scrollbar-thumb-white scrollbar-track-neutral-600 scrollbar-thumb-rounded scrollbar-track-rounded">
-                                    <div className="flex flex-col gap-4">
-                                        <p className="lg:text-lg leading-relaxed">Universitas Diponegoro membuka kembali Ujian Mandiri (UM) S1 dengan menggunakan metode gabungan antara portofolio dan Tes Potensi Skolastik (TPS) Secara Online.</p>
-                                    </div>
-                                    <div className="flex flex-col gap-4">
-                                        <h1 className="font-bold xs:text-lg lg:text-xl">Pilihan Jalur Ujian Mandiri (UM) S1:</h1>
-                                        <p className="lg:text-lg leading-relaxed">Anda dapat memilih salah satu jalur dari ketiga pilihan jalur dibawah ini:</p>
-                                        <ol className="list-decimal list-inside !leading-loose px-8 lg:text-lg">
-                                            <li>Jalur KIP dan/atau Golongan tidak mampu yang dibuktikan dengan Kepemilikan KIP (Kartu Indonesia Pintar) ditetapkan UKT Golongan 1-3 tanpa SPI</li>
-                                            <li>Jalur Reguler, pembayaran meliputi UKT tertinggi dan SPI sesuai pilihan golongan (1 atau 2)</li>
-                                            <li>Jalur Kemitraan (untuk umum), pembayaran meliputi UKT Tertinggi dan SPI diatas golongan II</li>
-                                        </ol>
-                                    </div>  
-                                    <div className="flex flex-col gap-4">
-                                        <h1 className="font-bold xs:text-lg lg:text-xl">Persiapkan sebelum mendaftar:</h1>
-                                        <ol className="list-decimal list-inside !leading-loose px-8 lg:text-lg">
-                                            <li>Nilai Raport</li>
-                                            <li>Prestasi Non Akademik/Kejuaraan (bila ada)</li>
-                                            <li>Esai tentang Wawasan Kebangsaan</li>
-                                        </ol>
-                                    </div>  
-                                    <div className="flex flex-col gap-4">
-                                        <h1 className="font-bold xs:text-lg lg:text-xl">Persyaratan peserta Ujian Mandiri (UM) S1:</h1>
-                                        <ol className="list-decimal list-inside !leading-loose px-8 lg:text-lg">
-                                            <li>Siswa lulusan SMA/SMK/MA atau yang sederajat, lulus ujian persamaan, atau yang setara lainnya (paket C) tahun 2022, 2021 dan 2020</li>
-                                            <li>Memenuhi persyaratan sesuai program studi yang dituju,</li>
-                                            <li>Usia maksimal 22 tahun</li>
-                                        </ol>
-                                    </div>  
+                                    <b> Kebijakan Privasi </b> <p> Website alspective.web.id dimiliki oleh OSIS SMA Islam AL Azhar 19, yang akan menjadi pengontrol atas data pribadi Anda. </p> <p> Kami telah mengadopsi Kebijakan Privasi ini untuk menjelaskan bagaimana kami memproses informasi yang dikumpulkan oleh alspective.web.id, yang juga menjelaskan alasan mengapa kami perlu mengumpulkan data pribadi tertentu tentang Anda. Oleh karena itu, Anda harus membaca Kebijakan Privasi ini sebelum menggunakan website alspective.web.id. </p> <p> Kami menjaga data pribadi Anda dan berjanji untuk menjamin kerahasiaan dan keamanannya. </p> <b> Informasi pribadi yang kami kumpulkan: </b> <p> Saat Anda mengunjungi alspective.web.id, kami secara otomatis mengumpulkan informasi tertentu mengenai perangkat Anda, termasuk informasi tentang browser web, alamat IP, zona waktu, dan sejumlah cookie yang terinstal di perangkat Anda. Selain itu, selama Anda menjelajahi Website, kami mengumpulkan informasi tentang setiap halaman web atau produk yang Anda lihat, website atau istilah pencarian apa yang mengarahkan Anda ke Website, dan cara Anda berinteraksi dengan Website. Kami menyebut informasi yang dikumpulkan secara otomatis ini sebagai "Informasi Perangkat". Kemudian, kami mungkin akan mengumpulkan data pribadi yang Anda berikan kepada kami (termasuk tetapi tidak terbatas pada, Nama, Nama belakang, Alamat, informasi pembayaran, dll.) selama pendaftaran untuk dapat memenuhi perjanjian. </p> <b> Mengapa kami memproses data Anda? </b> <p> Menjaga data pelanggan agar tetap aman adalah prioritas utama kami. Oleh karena itu, kami hanya dapat memproses sejumlah kecil data pengguna, sebanyak yang benar-benar diperlukan untuk menjalankan website. Informasi yang dikumpulkan secara otomatis hanya digunakan untuk mengidentifikasi kemungkinan kasus penyalahgunaan dan menyusun informasi statistik terkait penggunaan website. Informasi statistik ini tidak digabungkan sedemikian rupa hingga dapat mengidentifikasi pengguna tertentu dari sistem. </p> <p> Anda dapat mengunjungi website tanpa memberi tahu kami identitas Anda atau mengungkapkan informasi apa pun, yang dapat digunakan oleh seseorang untuk mengidentifikasi Anda sebagai individu tertentu yang dapat dikenali. Namun, jika Anda ingin menggunakan beberapa fitur website, atau Anda ingin menerima newsletter kami atau memberikan detail lainnya dengan mengisi formulir, Anda dapat memberikan data pribadi kepada kami, seperti email, nama depan, nama belakang, kota tempat tinggal, organisasi, dan nomor telepon Anda. Anda dapat memilih untuk tidak memberikan data pribadi Anda kepada kami, tetapi Anda mungkin tidak dapat memanfaatkan beberapa fitur website. Contohnya, Anda tidak akan dapat menerima Newsletter kami atau menghubungi kami secara langsung dari website. Pengguna yang tidak yakin tentang informasi yang wajib diberikan dapat menghubungi kami melalui mail@alspective.web.id. </p> <b> Hak-hak Anda: </b> <p> Jika Anda seorang warga Eropa, Anda memiliki hak-hak berikut terkait data pribadi Anda: </p> <ul> <li> Hak untuk mendapatkan penjelasan. </li> <li> Hak atas akses. </li> <li> Hak untuk memperbaiki. </li> <li> Hak untuk menghapus. </li> <li> Hak untuk membatasi pemrosesan. </li> <li> Hak atas portabilitas data. </li> <li> Hak untuk menolak. </li> <li> Hak-hak terkait pengambilan keputusan dan pembuatan profil otomatis. </li> </ul> <p> Jika Anda ingin menggunakan hak ini, silakan hubungi kami melalui informasi kontak di bawah ini. </p> <p> Selain itu, jika Anda seorang warga Eropa, perlu diketahui bahwa kami akan memproses informasi Anda untuk memenuhi kontrak yang mungkin kami miliki dengan Anda (misalnya, jika Anda melakukan pemesanan melalui Website), atau untuk memenuhi kepentingan bisnis sah kami seperti yang tercantum di atas. Di samping itu, harap diperhatikan bahwa informasi Anda mungkin dapat dikirim ke luar Eropa, termasuk Kanada dan Amerika Serikat. </p> <b> Link ke website lain: </b> <p> Website kami mungkin berisi tautan ke website lain yang tidak dimiliki atau dikendalikan oleh kami. Perlu diketahui bahwa kami tidak bertanggung jawab atas praktik privasi website lain atau pihak ketiga. Kami menyarankan Anda untuk selalu waspada ketika meninggalkan website kami dan membaca pernyataan privasi setiap website yang mungkin mengumpulkan informasi pribadi. </p> <b> Keamanan informasi: </b> <p> Kami menjaga keamanan informasi yang Anda berikan pada server komputer dalam lingkungan yang terkendali, aman, dan terlindungi dari akses, penggunaan, atau pengungkapan yang tidak sah. Kami menjaga pengamanan administratif, teknis, dan fisik yang wajar untuk perlindungan terhadap akses, penggunaan, modifikasi, dan pengungkapan tidak sah atas data pribadi dalam kendali dan pengawasannya. Namun, kami tidak menjamin tidak akan ada transmisi data melalui Internet atau jaringan nirkabel. </p> <b> Pengungkapan hukum: </b> <p> Kami akan mengungkapkan informasi apa pun yang kami kumpulkan, gunakan, atau terima jika diwajibkan atau diizinkan oleh hukum, misalnya untuk mematuhi panggilan pengadilan atau proses hukum serupa, dan jika kami percaya dengan itikad baik bahwa pengungkapan diperlukan untuk melindungi hak kami, melindungi keselamatan Anda atau keselamatan orang lain, menyelidiki penipuan, atau menanggapi permintaan dari pemerintah. </p> <b> Informasi kontak: </b> <p> Jika Anda ingin menghubungi kami untuk mempelajari Kebijakan ini lebih lanjut atau menanyakan masalah apa pun yang berkaitan dengan hak perorangan dan Informasi pribadi Anda, Anda dapat mengirim email ke mail@alspective.web.id. </p>
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,9 @@
 export default function Home() {
-
   return (
     <>
 	  <div className="lg:hidden  video-background h-screen flex justify-center items-center">
-		<iframe src="https://www.youtube.com/embed/ANsNQnA1330?controls=0&showinfo=0&rel=0&mute=1&autoplay=1&loop=1&playlist=ANsNQnA1330" frameBorder="0" allowFullScreen ></iframe>
-		<div className="container2"> <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"></img></div>  
+		<iframe id="video" src="https://www.youtube.com/embed/ANsNQnA1330?controls=0&showinfo=0&rel=0&autoplay=1&mute=1&loop=1&playlist=ANsNQnA1330" frameBorder="0" allowFullScreen enablejsapi="1"/> 
+		<div className="container2"> <img src="/logo_landing.png" className="xs:w-[calc(100vh-300px)] lg:w-[calc(100vh-200px)] lg:pt-20"/></div>  
      </div>
      <div  className="xs:bg-[url('/landing/bg_mobile.png')] lg:bg-[url('/landing/bg.png')] bg-cover xs:bg-[92.5%_bottom] lg:bg-center">	
         <div className="xs:hidden lg:block h-screen flex justify-center items-center ">
@@ -19,7 +18,7 @@ export default function Home() {
             <div className="self-center">
               <h1 className="bg-gradient-to-b from-white to-gray-500 inline-block text-transparent bg-clip-text font-ethnocentric text-7xl">BIMBO</h1>
               <img src="/landing/line.png" className="w-[calc(100vh-625px)] object-contain"></img>
-              <p className="text-white text-xl">Bimbo adalah seekor gajah ranger yang datang dari semesta parallel melalui sebuah portal. Dia akan membimbing siswa/i SMA Se-Indonesia untuk menjadi seorang space ranger yang tangguh dan mampu melampaui ketidakterbatasan.</p>
+              <p className="text-white text-xl">Bimbo is an elephant ranger who came from a parallel universe through a portal. He will guide you to become a formidable space ranger and be able to transcend the infinity of the universe!</p>
             </div>
           </div>
         </div>
@@ -30,6 +29,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </>
+	</>
   )
 }
