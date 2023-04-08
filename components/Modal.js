@@ -21,7 +21,7 @@ export default function Modal({visibility, slideNum, onClose}) {
     }
 
     const handleClose = (e) => {
-        if (e.target.className && e.target.className !== undefined && e.target.className === "outside") { onClose()};
+        if (e.target.className && e.target.className !== undefined && e.target.className.toString().includes("outside")) { onClose()};
     }
 
     SwiperCore.use([Navigation]);
